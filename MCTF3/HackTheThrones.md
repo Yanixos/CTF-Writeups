@@ -28,16 +28,22 @@ I made a little bash script :
 and here we got an interesting id :
 
 ![Alt text](./Pictures/brute-public.png?raw=true "public")
+
 ------------
 
 Checking the code source of :  http://37.187.186.219:8080/hack_the_throne/dev_b3ta/books.php?type=public&id=356, give us a comment with : (/4dm1n_p4n3l/)
 The level2 was like :
+
 ![Alt text](./Pictures/tsema.png?raw=true "tsema")
+
 ------------
 
 I contacted my teammate Zaki about it, and we both thought it must be the 3rd level of HackTheThrones.
 We had a login page at : http://37.187.186.219:8080/hack_the_throne/dev_b3ta/4dm1n_p4n3l/ which was vulnerable to an SQLi but first we should bypass the filter :
+
+
 ![Alt text](./Pictures/login.png?raw=true "tsema")
+
 ------------
 
 Zaki took care of it, bypassed the filter and we got two gifts :
@@ -75,10 +81,11 @@ MCTF3{whY_Th3_H3ll_th3r3_1s_an_UploaD_f0rm}
 The last level was about getting priveledge escalation and reading a file in the root directory, Red and i started to search for interesting file... we end up with find the file /etc/shadow with 777 permission 
 
 ![Alt text](./Pictures/shell.png?raw=true "shell")
+
 ------------
+
 since we had only 10mn left, we panicked a bit to have problems adding a new entry to the shadow file because there were others modifying the same file...
 The ctf ended and we couldn't cat the file passwd file... =((
-
 
 ------------
 
